@@ -1,0 +1,28 @@
+{
+  "name": "shorterm",
+  "version": "0.1",
+  "description": "",
+  "main": "bin/index.js",
+  "scripts": {
+    "build": "node ./src/scripts/build.js && chmod +x ./bin/index.js",
+    "release": "node ./src/scripts/upgrade-version.js && npm run build && npm release"
+  },
+  "bin": {
+    "bashnode": "./bin/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@inquirer/prompts": "^3.3.0",
+    "axios": "^1.6.5",
+    "chalk": "^4.1.1",
+    "commander": "^12.1.0",
+    "conf": "^12.0.0",
+    "ora": "^6.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.16.1",
+    "esbuild": "^0.18.11",
+    "typescript": "^5.1.6"
+  }
+}
